@@ -1,0 +1,27 @@
+architect:
+  - ammaratef45
+docker:
+  as_root: true
+  image: adamantium/flutter
+
+install: |-
+  curl -sSL https://get.rvm.io | bash -s stable --ruby
+  source /usr/local/rvm/scripts/rvm
+  gem install pdd
+  gem install fastlane --no-document
+  
+merge:
+  script: |-
+    cd android
+    pdd -f /dev/null -v
+    chmod +x ./gradlew
+    ./gradlew assembleRelease
+    
+deploy:
+  script: |-
+    cd android
+    pdd -f /dev/null -v
+    chmod +x ./gradlew
+    ./gradlew assembleRelease
+    cd fastlane
+    fastlane beta

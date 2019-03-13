@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: adamantium/flutter
+    steps:
+      - checkout
+      - run: curl -sSL https://get.rvm.io | bash -s stable --ruby && source /usr/local/rvm/scripts/rvm && gem install pdd && pdd -f /dev/null -v
+      - run: cd android && chmod +x ./gradlew && ./gradlew assembleDebug
