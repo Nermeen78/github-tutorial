@@ -9,3 +9,6 @@
 /build
 /captures
 .externalNativeBuild
+
+api-project.json
+key.properties

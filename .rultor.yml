@@ -4,6 +4,10 @@ docker:
   as_root: true
   image: adamantium/flutter
 
+decrypt:
+  repo/android/api-project.json: "repo/android/api-project.json.asc"
+  repo/android/key.properties: "repo/android/key.properties.asc"
+
 install: |-
   curl -sSL https://get.rvm.io | bash -s stable --ruby
   source /usr/local/rvm/scripts/rvm

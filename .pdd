@@ -1,4 +1,4 @@
 --verbose
---exclude online_trading/.idea/**/*
---exclude online_trading/app/buid/**/*
+--exclude android/.idea/**/*
+--exclude android/app/buid/**/*
 --rule max-estimate:90
