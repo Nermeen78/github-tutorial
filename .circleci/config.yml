@@ -6,4 +6,5 @@ jobs:
     steps:
       - checkout
       - run: curl -sSL https://get.rvm.io | bash -s stable --ruby && source /usr/local/rvm/scripts/rvm && gem install pdd && pdd -f /dev/null -v
+      - run: cd android && echo $KEYPROPS | base64 --decode > key.properties
       - run: cd android && chmod +x ./gradlew && ./gradlew assembleDebug

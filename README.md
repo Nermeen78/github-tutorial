@@ -4,3 +4,6 @@
 [![CircleCI](https://circleci.com/gh/ammaratef45/github-tutorial/tree/master.svg?style=svg)](https://circleci.com/gh/ammaratef45/github-tutorial/tree/master)
 
 An application built to demonstrate how to use GitHub
+
+# Download
+The beta version is available [here](https://play.google.com/store/apps/details?id=com.opensource.ammar.githubtutorial)
